@@ -123,3 +123,10 @@ document.addEventListener("keypress", function (e) {
         btn.click();
     }
 })
+
+document.addEventListener("keydown", function (e) {
+    if (e.key == "Backspace") {
+        const btn = document.querySelector('#tecla_backspace');
+        btn.click();
+    }
+})
