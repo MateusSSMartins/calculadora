@@ -1,53 +1,61 @@
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <script src="script.js" defer></script>
     <title>Calculadora</title>
 </head>
 
 <body>
     <div class="fundo">
-        <h1>Mateus Silveira</h1>
+     
         <div class="calculadora">
             <h1>Calculadora</h1>
-                <div class="tela">
+            <p class="tela" id="tela">
 
-                </div>
-                <div class="teclas">
-                    <table>
-                        <tbody><tr>
-                            <td class="buttonTd"><button class="button" id="tecla_c">C</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_backspace">&lt;</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_dividir">⁄</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_multiplicar">X</button></td>
+            </p>
+            <div class="teclas">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="buttonTd"><button class="button" id="tecla_c" onclick="clean()">C</button></td>
+                            <td class="buttonTd"><button class="button" id="tecla_backspace" onclick="backspace()">&lt;</button></td>
+                            <td class="buttonTd"><button class="button" id="tecla_dividir" onclick="insert('/')">⁄</button></td>
+                            <td class="buttonTd"><button class="button" id="tecla_multiplicar" onclick="insert('*')">X</button></td>
                         </tr>
                         <tr>
-                            <td class="buttonTd"><button class="button" id="tecla_7">7</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_8">8</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_9">9</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_subtrair">-</button></td>
+                            <td class="buttonTd"><button class="button" id="tecla_7" onclick="insert('7')">7</button>
+                            </td>
+                            <td class="buttonTd"><button class="button" id="tecla_8" onclick="insert('8')">8</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_9" onclick="insert('9')">9</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_subtrair" onclick="insert('-')">-</button></td>
                         </tr>
                         <tr>
-                            <td class="buttonTd"><button class="button" id="tecla_4">4</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_5">5</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_6">6</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_somar">+</button></td>
+                            <td class="buttonTd"><button class="button" id="tecla_4" onclick="insert('4')">4</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_5" onclick="insert('5')">5</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_6" onclick="insert('6')">6</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_somar" onclick="insert('+')">+</button></td>
                         </tr>
                         <tr>
-                            <td class="buttonTd"><button class="button" id="tecla_1">1</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_2">2</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_3">3</button></td>
-                            <td class="resultadoTd" rowspan="2"><button class="resultado" id="tecla_resultado">=</button></td>
+                            <td class="buttonTd"><button class="button" id="tecla_1" onclick="insert('1')">1</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_2" onclick="insert('2')">2</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_3" onclick="insert('3')">3</button></td>
+                            <td class=" resultadoTd" rowspan="2"><button class="resultado"
+                                                id="tecla_resultado" onclick="calcular()">=</button></td>
                         </tr>
                         <tr>
-                            <td class="buttonTd_0" colspan="2"><button class="button_0" id="tecla_0">0</button></td>
-                            <td class="buttonTd"><button class="button" id="tecla_ponto">.</button></td>
-                           
+                            <td class="buttonTd_0" colspan="2"><button class="button_0" id="tecla_0" onclick="insert('0')">0</button></td>
+                            <td class=" buttonTd"><button class="button" id="tecla_ponto" onclick="insert('.')">.</button></td>
+
                         </tr>
-                    </tbody></table>
-                </div>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-</body></html>
+</body>
+
+</html>
